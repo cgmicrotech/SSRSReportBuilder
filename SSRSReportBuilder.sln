@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSRSReportBuilder", "SSRSReportBuilder.csproj", "{F5E18FBB-6A13-45E3-9091-5D4FC20A211D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5E18FBB-6A13-45E3-9091-5D4FC20A211D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E18FBB-6A13-45E3-9091-5D4FC20A211D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E18FBB-6A13-45E3-9091-5D4FC20A211D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E18FBB-6A13-45E3-9091-5D4FC20A211D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0DAC7CB7-1A60-4CA0-94FF-D1C0E788904C}
+	EndGlobalSection
+EndGlobal
