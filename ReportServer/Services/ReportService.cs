@@ -1,5 +1,6 @@
 using Grpc.Core;
 using ReportServer;
+using ReportServer.Generators;
 
 namespace ReportServer.Services
 {
@@ -18,9 +19,14 @@ namespace ReportServer.Services
 
         public override Task<ReportResult> GenerateReport(ReportGenerationRequest request, ServerCallContext context)
         {
-            return base.GenerateReport(request, context);
+            return request.RepotType switch
+            {
+                ReportType.Pdf => new RDLGenerator().GeneratePDF(request.ReportDefinition, request.ReportData),
+                ReportType.Xls => throw new NotImplementedException(),
+                ReportType.Html => throw new NotImplementedException(),
+                _ => throw new InvalidDataException("Unable to determine a proper way to generate the chosen report type.")
+            };
         }
-
 
     }
 }
