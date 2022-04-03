@@ -27,7 +27,7 @@ public class RDLGenerator
                 foreach (var column in row.Properties())
                 {
                     if (!table.Columns.Contains(column.Name))
-                        table.Columns.Add(column.Name, typeof(object));
+                        table.Columns.Add(column.Name, typeof(string));
 
                     tblRow[column.Name] = row.GetValue(column.Name);
                 }
