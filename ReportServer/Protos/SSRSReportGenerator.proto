@@ -32,7 +32,7 @@ message DataSet {
 message ReportGenerationRequest {
   ReportType report_type = 1;
   bytes report_definition = 2;
-  DataSet report_data = 3;
+  repeated DataSet report_data = 3;
   bool print_after_generate = 4;
   bool printer_name = 5;
 }
