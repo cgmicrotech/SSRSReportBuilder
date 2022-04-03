@@ -1,14 +1,18 @@
 ﻿using Google.Protobuf;
-
-namespace ReportServer.Generators;
+using SSRSReportGeneratorServer;
 
 public class RDLGenerator
 {
     public Task<ReportResult> GeneratePDF(ByteString rdlDefinition, DataSet data)
     {
-        return new Task<ReportResult>(() => new ReportResult()
+        return Task.Run(() =>
         {
-            ReportType = ReportType.Pdf
+            var rslt = new ReportResult()
+            {
+                ReportType = ReportType.Pdf,
+                BinaryData = ByteString.CopyFrom(new byte[]{1})
+            };
+            return rslt;
         });
     }
 }
