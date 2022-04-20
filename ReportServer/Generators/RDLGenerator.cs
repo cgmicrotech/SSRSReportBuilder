@@ -58,7 +58,7 @@ public class RDLGenerator
         foreach (var table in tableData)
             rpt.AddDataSource(table.TableName, table);
 
-        var binary = rpt.Execute(RenderType.Pdf);
+        var binary = rpt.Execute(RenderType.Pdf, 0);
 
         var result = new ReportResult()
         {
